@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search Results | PoKéDeX</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<h1>PoKéDeX</h1>
+		<form>
+			<input type="search" name="keyword" />
+			<button type="submit">Search</button>
+		</form>
+		<ul id="pokelist"></ul>
+		<a href="" class="prevLink">previous</a> | <a href="?offset=20" class="nextLink">next</a>
+		<div class="spinnerContainer">
+			<div class="spinner"></div>
+		</div>
+	</main>
+
+	<template id="template">
+		<li>
+		<a href="" class="listItem"></a>
+		</li>
+	</template>
+	<script src="/search.js"></script>
+</body>
+</html>

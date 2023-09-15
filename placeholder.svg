@@ -1,0 +1,35 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+	<rect
+        x="0"
+        y="0"
+        width="400"
+        height="300"
+        fill="#eaeaea"/>
+  <rect
+        x="8"
+        y="8"
+        rx="10"
+        yx="10"
+        width="384"
+        height="284"
+        fill="transparent"
+        stroke="#cfcfcf"
+        stroke-width="3"/>
+  <polygon
+           points="172,180 200,130 230,130 240,150 200,221"
+           fill="#cfcfcf"/>
+  <polygon
+           points="50,280 140,140 240,280"
+           fill="#cfcfcf"/>
+  <polygon
+           points="170,280 260,120 350,280"
+           fill="#cfcfcf"/>
+  <polygon
+           points="200,128 215,100 230,128"
+           fill="#dfdfdf"/>
+  <circle
+          cx="100"
+          cy="90"
+          r="40"
+          fill="#cfcfcf"/>
+</svg>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<h1>PoKéDeX</h1>
+		<!-- <img src="/placeholder.svg" alt="" class="svgImage"> -->
+		<form action="search.html">
+			<input type="search" name="keyword" />
+			<button type="submit">Search</button>
+		</form>
+		<ul id="pokelist"></ul>
+		<a href="" class="prevLink">previous</a> | <a href="?offset=20" class="nextLink">next</a>
+		<div class="spinnerContainer">
+			<div class="spinner"></div>
+		</div>
+
+		<!-- <div class="overlay">
+			<div class="modal">
+				<div class="modalHeader">
+					<h1>Cookies omnomnom</h1>
+					<button class="closeBtn">X</button>
+				</div>
+				<div class="modalContent">
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam eum libero nam similique! Eligendi illo at modi dolore molestias debitis a perspiciatis, distinctio, nam maiores recusandae maxime, adipisci culpa blanditiis!</p>
+				</div>
+				<div class="modalChoice">
+					<button class="acceptBtn">Accept Cookies</button>
+					<button class="declineBtn">No Friggin' Way, José</button>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- <div class="onboardingOverlay">
+			<div class="content"></div>
+			<div class="navBtns">
+				<button class="nextBtn">&rarr;</button>
+				<button class="skipBtn">Skip</button>
+			</div>
+		</div> -->
+
+	</main>
+
+
+	<template id="template">
+		<li>
+		<a href="" class="listItem"></a>
+		</li>
+	</template>
+	<script src="/app.js"></script>
+	<!-- <script src="/modal.js"></script> -->
+	<!-- <script src="/onboarding.js"></script> -->
+</body>
+</html>

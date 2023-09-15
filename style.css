@@ -1,0 +1,283 @@
+@import "./fonts.css";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: hsl(0, 50%, 50%);
+}
+
+main {
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 3em;
+	background-color: hsl(51, 88%, 61%);
+	padding: 3em;
+	border: 10px solid black;
+	border-radius: 30px;
+	border-bottom-width: 80px;
+	height: 90vh;
+	box-sizing: border-box;
+	position: relative;
+}
+
+main > div {
+	overflow-y: auto;
+	height: 100%;
+}
+
+main > div::-webkit-scrollbar-thumb {
+	background: hsla(0, 0%, 0%, .5);
+}
+
+main > h1 {
+	font-family: pokemon;
+	font-size: 300%;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: black;
+	background: linear-gradient(hsl(224, 50%, 70%), hsl(224, 50%, 30%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 0;
+	text-align: center;
+}
+
+h1.name {
+	text-transform: capitalize;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+ul li a {
+	text-transform: capitalize;
+}
+
+main::after {
+	content: "";
+	position: absolute;
+	bottom: -50px;
+	left: calc(50% - 30px);
+	width: 60px;
+	height: 20px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.navigateBack {
+	color: black;
+	font-size: 300%;
+	text-decoration: none;
+}
+
+.type {
+	padding: .2em 1em;
+	border-radius: 0.5em;
+	border: 1px solid black;
+	text-transform: capitalize;
+}
+
+.type.normal {
+	background: linear-gradient(hsl(0, 0%, 80%), hsl(0, 0%, 50%));
+}
+
+.type.flying {
+	background: linear-gradient(hsl(51, 72%, 80%), hsl(51, 72%, 50%));
+}
+
+.type.grass {
+	background: linear-gradient(hsl(120, 81%, 80%), hsl(120, 81%, 50%));
+}
+
+.type.poison {
+	background: linear-gradient(hsl(302, 73%, 80%), hsl(302, 73%, 50%));
+}
+
+.type.fire {
+	background: linear-gradient(hsl(0, 56%, 55%), hsl(41, 63%, 51%));
+}
+
+.type.water {
+	background: linear-gradient(hsl(184, 56%, 55%), hsl(219, 63%, 51%));
+}
+
+.type.bug {
+	background: linear-gradient(hsl(29, 84%, 52%), hsl(41, 90%, 23%));
+}
+
+.spinnerContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: hsl(51, 88%, 61%);
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	background: linear-gradient(red 43%, black 43%, black 52%, white 52%);
+	border: 5px solid black;
+	border-radius: 50%;
+	animation: youSpinMyWorldRightRoundRightRound 1s linear infinite;
+}
+
+@keyframes youSpinMyWorldRightRoundRightRound{
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+.spinner::after {
+	content: "";
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	border: 7px solid black;
+	background-color: white;
+	border-radius: 50%;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+	box-sizing: border-box;
+}
+
+.spinner::before {
+	content: "";
+	position: absolute;
+	box-sizing: border-box;
+	border: 2px solid black;
+	background-color: white;
+	z-index: 4;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	top: calc(50% - 10px);
+	left: calc(50% - 10px);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: hsla(0, 0%, 0%, 0.5);
+	backdrop-filter: blur(3px);
+}
+
+.modal {
+	width: 90%;
+	height: 50%;
+	background-color: white;
+	z-index: 1000;
+	position: absolute;
+	top: calc(50% - 25%);
+	left: calc(50% - 45%);
+	box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.5);
+	display: grid;
+	grid-template-rows: 10% auto 10%;
+	padding: 0.5em 1em;
+	box-sizing: border-box;
+}
+
+.modal h1 {
+	font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.modalHeader {
+	display: flex;
+	justify-content: space-between;
+}
+
+.onboardingOverlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: hsla(0, 0%, 0%, 0.4);
+	display: grid;
+	grid-template-rows: auto 2em;
+}
+
+.tooltip.container {
+	position: relative;
+	height: 5em;
+	display: inline-block;
+}
+
+.tooltip.circle {
+	position: absolute;
+	top: 1em;
+	left: 0;
+	height: 51px;
+	width: 51px;
+	border: 5px solid lightblue;
+	border-radius: 50%;
+}
+
+.tooltip.line {
+	position: absolute;
+	height: 5px;
+	width: 200px;
+	background-color: lightblue;
+	top: calc(1em + 28px);
+	left: 58px;
+}
+
+.tooltip.text {
+	position: absolute;
+	left: 80px;
+	top: -20px;
+	width: 190px;
+	color: lightblue;
+	font-weight: 700;
+	animation: fade-in 1.5s 3.4s ease forwards;
+	opacity: 0;
+}
+
+.myCircle {
+  animation: circleAnimation 2s 2s ease-in forwards;
+  visibility: hidden;
+}
+
+.myLine {
+	visibility: hidden;
+	animation: circleAnimation 1s 3.2s ease-in forwards;
+}
+
+@keyframes circleAnimation {
+  from {
+    stroke-dasharray: 0 1000;
+    visibility: hidden;  
+  }
+  to {
+    stroke-dasharray: 1000 0;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+svg {
+	width: 200px;
+	height: auto;
+}
